@@ -1,0 +1,49 @@
+.app-container {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.ambient-glow {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.glow-1 {
+  top: -10%;
+  left: -5%;
+  width: 40vw;
+  height: 40vw;
+  background: rgba(0, 210, 255, 0.15);
+}
+
+.glow-2 {
+  bottom: -10%;
+  right: -5%;
+  width: 30vw;
+  height: 30vw;
+  background: rgba(58, 123, 213, 0.15);
+}
+
+/* Layout primitives */
+.page-wrapper {
+  padding: 24px;
+  max-width: 1440px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
